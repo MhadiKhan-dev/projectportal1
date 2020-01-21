@@ -18,7 +18,7 @@ class ProjectController extends Controller
 
     public function index()
     {
-        $date = today()->format('m-d-Y');
+        $date = today()->format('m/d/Y');
         $projects = Project::where('end_date', '>=', $date)->paginate(2);
             
         return view('project.index', compact('projects'));

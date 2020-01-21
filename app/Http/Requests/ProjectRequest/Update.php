@@ -36,8 +36,8 @@ class Update extends FormRequest
     {
         $project             = $this->project;
         $project->name       = $this->name;
-        $project->end_date   = date('m-d-Y', strtotime($this->end_date));
-        $project->start_date = date('m-d-Y', strtotime($this->start_date));
+        $project->end_date   = date('m/d/Y', strtotime($this->end_date));
+        $project->start_date = date('m/d/Y', strtotime($this->start_date));
    
      return $project->save();
     }
